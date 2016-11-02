@@ -11,6 +11,12 @@ import com.catbagan.datas.HelloDto;
 import com.catbagan.datas.UcopiaData;
 import com.catbagan.datas.UcopiaResponseDTO;
 import com.catbagan.services.UcopiaService;
+
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 /**
  * Mock  Ends points Ucopia  
  * @author jenseric.catbagan
@@ -38,10 +44,18 @@ public class UcopiaController {
 	 * @return
 	 */
 	@RequestMapping(value="/portal_api.php", method = RequestMethod.POST)
+	@ApiOperation(value = "Ucopia authentification", notes = "Ucopia authentification for customer (anonymous or not). Only one client is available login:jenseric, password: jenseric")
+	@ApiResponses(value = { 
+            @ApiResponse(code = 200, message = "the authentification is done if no error object is returned.") })
+
+	 @ApiImplicitParams({
+		    @ApiImplicitParam(name = "action", value = "subscribe or authenticate", required = true, dataType = "string", paramType = "form"),
+		    @ApiImplicitParam(name = "login", value = "maestro login", required = false, dataType = "string", paramType = "form"),
+		    @ApiImplicitParam(name = "password", value = "maestro password", required = false, dataType = "string", paramType = "form"),
+		    @ApiImplicitParam(name = "type", value = "true if user accept connection term", required = false, dataType = "boolean", paramType = "form")
+		  })
 	public UcopiaResponseDTO mockAuthenticateOK(@ModelAttribute UcopiaData ucopiaData) {
-		
-		
-		
+		 
 		if("authenticate".equals(ucopiaData.getAction())) {
 			return ucopiaService.authenticate(ucopiaData.getLogin(), ucopiaData.getPassword());
 		}
