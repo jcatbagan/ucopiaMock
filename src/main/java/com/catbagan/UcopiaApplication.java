@@ -6,7 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class UcopiaApplication  extends SpringBootServletInitializer {
+public class UcopiaApplication extends SpringBootServletInitializer {
 	
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
