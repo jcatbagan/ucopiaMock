@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 
 import com.catbagan.datas.HelloDto;
 import com.catbagan.datas.UcopiaData;
@@ -24,6 +25,12 @@ import io.swagger.annotations.ApiResponses;
  */
 @RestController
 public class UcopiaController {
+
+	
+    @RequestMapping("/")
+    String home() {
+        return "Hello Word!<br/><br/><a href=\"swagger-ui.html\">Swagger Documentation</a>!";
+    }
 	
 	@Autowired
 	UcopiaService ucopiaService;
