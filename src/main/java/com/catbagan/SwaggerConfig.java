@@ -32,8 +32,7 @@ public class SwaggerConfig {
 	private ApiInfo apiInfo() {
 		ApiInfoBuilder apiInfoBuidler = new ApiInfoBuilder();
 		apiInfoBuidler.contact(new Contact("jenseric", "https://github.com/jcatbagan/ucopiaMock", "jenseric.catbagan@keyrus.com"));
-		apiInfoBuidler.description("Ucopia Mock for digital factory projects during \"portail captif\" development. Example with 2 web services, the first one without customization and the other one with."
-				+ "Mock can be test in http://digitalfactory-v2.qualif.keyrus.info/dfstorefront/avenue83new/fr/portail-captif");
+		apiInfoBuidler.description("Ucopia Mock for digital factory projects during \"portail captif\" development. Example with 2 web services, the first one without customization and the other one with.");
 		apiInfoBuidler.title("Ucopia Mock");
 		apiInfoBuidler.version("1.0.0");
 		
