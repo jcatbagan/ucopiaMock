@@ -26,12 +26,7 @@ import io.swagger.annotations.ApiResponses;
 @RestController
 public class UcopiaController {
 
-	
-    @RequestMapping("/")
-    String home() {
-        return "Hello Word!<br/><br/><a href=\"swagger-ui.html\">Swagger Documentation</a>!";
-    }
-	
+
 	@Autowired
 	UcopiaService ucopiaService;
 	
