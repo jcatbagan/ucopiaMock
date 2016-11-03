@@ -31,7 +31,7 @@ public class SwaggerConfig {
 	 */
 	private ApiInfo apiInfo() {
 		ApiInfoBuilder apiInfoBuidler = new ApiInfoBuilder();
-		apiInfoBuidler.contact(new Contact("jenseric", "", "jenseric.catbagan@keyrus.com"));
+		apiInfoBuidler.contact(new Contact("jenseric", "https://github.com/jcatbagan/ucopiaMock", "jenseric.catbagan@keyrus.com"));
 		apiInfoBuidler.description("Ucopia Mock for digital factory projects. Example with 2 web services, the first one without customization and the other one with.");
 		apiInfoBuidler.title("Ucopia Mock");
 		apiInfoBuidler.version("1.0.0");
