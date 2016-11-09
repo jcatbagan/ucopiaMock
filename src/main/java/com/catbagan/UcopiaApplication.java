@@ -19,15 +19,5 @@ public class UcopiaApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(UcopiaApplication.class, args);
 	}
-	
-	
-    @Bean
-    public WebMvcConfigurerAdapter corsConfigurer() {
-        return new WebMvcConfigurerAdapter() {
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/greeting-javaconfig").allowedOrigins("*");
-            }
-        };
-    }
+
 }
