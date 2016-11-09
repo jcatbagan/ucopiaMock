@@ -1,6 +1,7 @@
 package com.catbagan.controllers;
  
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,6 +31,7 @@ public class UcopiaController {
 	@Autowired
 	UcopiaService ucopiaService;
 	
+	@GetMapping("/greeting-javaconfig")
 	@RequestMapping(value="/hello", method = RequestMethod.GET)
     public HelloDto greeting(@RequestParam(value="firstname", defaultValue="jenseric") String firstname,
     		@RequestParam(value="name", defaultValue="catbagan") String name) {
@@ -45,6 +47,7 @@ public class UcopiaController {
 	 * Mock register web service
 	 * @return
 	 */
+	@GetMapping("/greeting-javaconfig")
 	@RequestMapping(value="/portal_api.php", method = RequestMethod.POST)
 	@ApiOperation(value = "Ucopia authentification", notes = "Ucopia authentification for customer (anonymous or not). Only one client is available login:jenseric, password: jenseric")
 	@ApiResponses(value = { 
