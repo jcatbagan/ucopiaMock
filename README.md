@@ -1,3 +1,3 @@
 # ucopiaMock
 
-See http://ucopiamockkeyrus.herokuapp.com/ucopia/portal_api.php
+See http://ucopiamockkeyrus.herokuapp.com/ucopia/swagger-ui.html#/ucopia-controller
